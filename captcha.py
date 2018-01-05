@@ -1,22 +1,24 @@
 from PIL import Image, ImageDraw, ImageFont
-import random
-import cv2
 
 text = "Vrinda & Tanya"
 
-#font = ImageFont.load_default();
+
 font1 = ImageFont.truetype(font='Herculanum', size = 40)
 font2 = ImageFont.truetype(font='Avenir', size = 40)
 font3 = ImageFont.truetype(font='Arial', size = 40)
+#or use this:
+#font = ImageFont.load_default();
 
 col1 = "blue"
 col2 = "red"
 col3 = "green"
 
+#following lists are just for multiple colors and fonts 
 l = [font1, font2, font3]
 m = [col1, col2, col3]
 
 image = Image.new('RGB',(450, 120), (255, 255, 255))
+#From the docs:
 #Image.new(mode, size) ⇒ image //by default black
 #Image.new(mode, size, color) ⇒ image
 
@@ -44,6 +46,9 @@ for i in range(len(text)):
 
 image.save("file.png", "PNG")
 
+
+
+#Some Help:
 '''check this out too:
 	            http://pillow.readthedocs.io/en/3.1.x/reference/ImageDraw.html#example-draw-partial-opacity-text
 '''
