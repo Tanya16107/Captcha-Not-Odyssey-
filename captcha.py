@@ -3,8 +3,8 @@ from PIL import Image, ImageDraw, ImageFont
 text = "Vrinda & Tanya"
 
 
-font1 = ImageFont.truetype(font='Herculanum', size = 40)
-font2 = ImageFont.truetype(font='Avenir', size = 40)
+#font1 = ImageFont.truetype(font='Herculanum', size = 40)
+#font2 = ImageFont.truetype(font='Avenir', size = 40)
 font3 = ImageFont.truetype(font='Arial', size = 40)
 #or use this:
 #font = ImageFont.load_default();
@@ -14,7 +14,7 @@ col2 = "red"
 col3 = "green"
 
 #following lists are just for multiple colors and fonts 
-l = [font1, font2, font3]
+#l = [font1, font2, font3]
 m = [col1, col2, col3]
 
 image = Image.new('RGB',(450, 120), (255, 255, 255))
@@ -29,7 +29,7 @@ x = 0
 y = 50
 for i in range(len(text)):
 	c = text[i]
-	font = l[1]
+	font = font3
 	c_size = font.getsize(c)
 	c_image = Image.new('RGBA', c_size, (0,0,0,0))
 	c_draw = ImageDraw.Draw(c_image)
@@ -84,4 +84,3 @@ The font option is used to specify which font to use. It should be an instance o
 
 The fill option gives the colour to use for the text.
 '''
-
